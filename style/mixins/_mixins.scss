@@ -1,0 +1,61 @@
+@mixin css3-prefix($prop, $value) {
+	-webkit-#{$prop}: #{$value};
+	-moz-#{$prop}: #{$value};
+	-ms-#{$prop}: #{$value};
+	-o-#{$prop}: #{$value};
+	#{$prop}: #{$value};
+}
+
+@mixin vertical-center {
+	position: relative;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+@mixin font-face($name, $file) {
+	@font-face {
+		font-family: "#{$name}";
+		src: url("../fonts/#{$file}.eot");
+		src: url("../fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
+			url("../fonts/#{$file}.woff") format("woff"),
+			url("../fonts/#{$file}.ttf") format("truetype"),
+			url("../fonts/#{$file}.svg?#webfont") format("svg");
+	}
+}
+
+@mixin abs-position($top, $right, $bottom, $left) {
+	position: absolute;
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+@mixin breakpoint($point) {
+	@if $point == large {
+		@media only screen and (min-width: 1366px) {
+			@content;
+		}
+	} @else if $point == desktop {
+		@media only screen and (min-width: 1024px) {
+			@content;
+		}
+	} @else if $point == tablet {
+		@media only screen and (min-width: 600px) {
+			@content;
+		}
+	}
+}
+
+@mixin text-shorten {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+@mixin center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

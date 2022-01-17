@@ -1,0 +1,59 @@
+* {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.main {
+  background-color: black;
+  width: 100vw;
+  min-height: 45vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.main .inner_container {
+  width: 80vw;
+  height: 90px;
+}
+.main .inner_container .upper-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 4.69vh;
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  gap: 4.69vh;
+}
+.main .inner_container .upper-header .stock a {
+  margin-left: 1.25vw;
+  font-size: 1.5rem;
+}
+.main .inner_container .upper-header .selected .heart_img {
+  margin-right: 0.52vw;
+}
+.main .inner_container .upper-header .selected .history_img {
+  margin-right: 0.89vw;
+  margin-left: 1.15vw;
+}
+.main .inner_container .upper-header a {
+  color: white;
+}
+.main .inner_container .upper-header .stock_img {
+  width: 1.46vw;
+}
+.main .inner_container .upper-header .heart_img {
+  width: 1.2vw;
+}
+.main .inner_container .upper-header .history_img {
+  width: 1.15vw;
+}
+.main .inner_container .down-header {
+  display: inline-block;
+}
+
+/*# sourceMappingURL=third_style.css.map */
