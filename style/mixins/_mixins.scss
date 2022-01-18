@@ -59,3 +59,45 @@
 	justify-content: center;
 	align-items: center;
 }
+
+// Mixins of Roman
+
+@mixin text(
+	$size: auto,
+	$color: #000000,
+	$weight: inherit,
+	$line: inherit,
+	$case: inherit,
+	$spacing: inherit
+) {
+	font-size: $size;
+	color: $color;
+	font-weight: $weight;
+	line-height: $line;
+	text-transform: $case;
+	letter-spacing: $spacing;
+}
+
+@mixin size($width: auto, $height: auto, $min: auto) {
+	width: $width;
+	height: $height;
+	min-height: $min;
+}
+
+@mixin flex($width, $height, $min) {
+	display: flex;
+	@include size($width, $height, $min);
+}
+
+@mixin flex-center($width, $height, $min) {
+	align-items: center;
+	justify-content: center;
+	@include flex($width, $height, $min);
+}
+
+@mixin btn($width, $height, $min) {
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	@include flex-center($width, $height, $min);
+}
