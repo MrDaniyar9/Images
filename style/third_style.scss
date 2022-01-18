@@ -9,31 +9,23 @@ body {
 .main {
 	background-color: black;
 	width: 100vw;
-	min-height: 45vh;
+	min-height: 50vh;
 	display: flex;
 	align-items: center;
-	// justify-content: center;
 	flex-direction: column;
 	.inner_container {
-		width: 80vw;
-		height: 90px;
+		@include size(80vw, 90x);
 
 		.upper-header {
 			@include center;
-			// position: relative;
-			top: 4.69vh;
-
-			min-height: 10vh;
+			@include size(inherit, 20vh);
 			// border: 1px solid red;
 			display: flex;
 			justify-content: space-between;
-			gap: 4.69vh;
 
 			.stock {
-				a {
-					margin-left: 1.25vw;
-					font-size: 1.5rem;
-				}
+				margin-left: 1.25vw;
+				font-size: 1.5rem;
 			}
 			.selected {
 				.heart_img {
@@ -58,8 +50,40 @@ body {
 				width: 1.15vw;
 			}
 		}
-		.down-header {
-			display: inline-block;
+		.center-header {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			::placeholder {
+				@include text(4.5rem, #ffffff, normal, inherit, inherit);
+			}
+			.input_search {
+				@include size(15vw, 10vh);
+				@include text(4.5rem, #ffffff, normal, inherit, inherit);
+				background-color: #000000;
+				border: none;
+				outline: none;
+			}
+			span {
+				@include size(95%, 0.05vh);
+				margin-top: 2vh;
+				background-color: #ffffff;
+			}
+		}
+		// down_header
+		.down_header {
+			@include size(87vw, 23vh);
+			// border: 1px solid red;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			a {
+				margin-right: 0.6vw;
+				@include text(1.125rem, #ffffff);
+				background: linear-gradient(rgba(0, 0, 0, 0) 0% #000000 100%);
+			}
 		}
 	}
 }
