@@ -103,13 +103,17 @@ body {
 	}
 
 	.down_section {
-		@include size(100%, auto);
+		@include size(90%, auto);
+		// border: 1px solid red;
+		margin: 0 auto;
 
-		.down_section_img {
+		.img_container1 {
 			display: flex;
-			flex-direction: row;
-			justify-content: center;
+			flex-direction: column;
 			// border: 1px solid red;
+			img {
+				margin-top: 1.35vw;
+			}
 			.img1 {
 				@include size(24.74vw, 13.54vw);
 			}
@@ -117,8 +121,34 @@ body {
 				@include size(24.79vw, 37.24vw);
 			}
 			.img3 {
+				@include size(24.79vw, 13.54vw);
+			}
+			.img4 {
 				@include size(24.79vw, 24.79vw);
 			}
+			.img5 {
+				@include size(24.79vw, 13.54vw);
+			}
+			.img6 {
+				@include size(24.79vw, 24.79vw);
+			}
+			.img7 {
+				@include size(24.79vw, 36.93vw);
+			}
 		}
+
+		// .img_container2 {
+		// 	display: inline-block;
+		// 	display: flex;
+		// 	flex-direction: row;
+		// 	justify-content: center;
+
+		// 	.img4 {
+		// 		@include size(24.79vw, 37.24vw);
+		// 	}
+		// 	.img5 {
+		// 		@include size(24.79vw, 13.54vw);
+		// 	}
+		// }
 	}
 }
