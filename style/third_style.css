@@ -127,11 +127,12 @@ body {
   margin-right: 1.04vw;
 }
 .main_section .down_section {
-  width: 80%;
+  width: 75%;
   height: auto;
   min-height: auto;
   margin: 0 auto;
   display: flex;
+  justify-content: center;
   flex-direction: row;
 }
 .main_section .down_section .img_container1 {
@@ -255,6 +256,15 @@ body {
 .main_section .down_section .img_container3 .l_img7 {
   width: 24.79vw;
   height: 13.54vw;
+  min-height: auto;
+}
+.main_section .loading_block {
+  display: flex;
+  justify-content: center;
+}
+.main_section .loading_block .loading_icon {
+  width: 1.41vw;
+  height: 1.41vw;
   min-height: auto;
 }
 

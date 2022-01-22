@@ -103,10 +103,11 @@ body {
 	}
 
 	.down_section {
-		@include size(80%, auto);
+		@include size(75%, auto);
 		// border: 1px solid red;
 		margin: 0 auto;
 		display: flex;
+		justify-content: center;
 		flex-direction: row;
 
 		.img_container1 {
@@ -194,6 +195,13 @@ body {
 			.l_img7 {
 				@include size(24.79vw, 13.54vw);
 			}
+		}
+	}
+	.loading_block {
+		display: flex;
+		justify-content: center;
+		.loading_icon {
+			@include size(1.41vw, 1.41vw);
 		}
 	}
 }
