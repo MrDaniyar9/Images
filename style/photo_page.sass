@@ -1,0 +1,56 @@
+@import "mixins/mixins"
+
+*
+    text-decoration: none
+    color: white
+
+.main_header
+    @include flex(100vw, 4.22vw, 4.22vw)
+    background-color: #000
+    justify-content: center
+
+    .inner_container
+        @include size(75vw, 4.22vw, 4.22vw)
+        display: flex
+        flex-direction: row
+        .left_header
+            @include flex(10vw, 4.22vw, 4.22vw)
+            align-items: center
+            justify-content: space-between
+
+            img
+                width: 1.46vw
+            a
+                color: white
+                font-size: 1.5rem
+        .right_header
+            @include flex(65vw, 4.22vw, 4.22vw)
+            flex-direction: row
+            align-items: center
+            justify-content: flex-end
+            gap: 2.08vw
+            .search, .favourite, .history
+                display: flex
+                align-items: center
+                gap: 0.7vw
+                font-size: 1rem
+
+// selected image section
+
+.selected_image
+    @include flex(100vw, 55.73vw, 55.73vw)
+    // width: 100vw
+    // height: 55.73vw
+    background-image: url(../images/background_main.png)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    color: black
+
+.upper_section
+    @include flex(100vw, 10vw, 10vw)
+    border: 1px solid red
+    justify-content: center
+    .inner_upper_section
+        @include flex(80vw, 10vw, 10vw)
+        border: 1px solid yellow
