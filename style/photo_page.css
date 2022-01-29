@@ -55,27 +55,104 @@
   width: 100vw;
   height: 55.73vw;
   min-height: 55.73vw;
-  background-image: url(../images/background_main.png);
-  background-position: center;
+  background-image: url("../images/background_main.png");
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  color: black;
+  flex-direction: column;
+  align-items: center;
 }
 
 .upper_section {
   display: flex;
   width: 100vw;
-  height: 10vw;
-  min-height: 10vw;
-  border: 1px solid red;
+  height: 21vh;
+  min-height: 21vh;
   justify-content: center;
 }
 .upper_section .inner_upper_section {
   display: flex;
   width: 80vw;
-  height: 10vw;
-  min-height: 10vw;
-  border: 1px solid yellow;
+  height: 21vh;
+  min-height: 21vh;
+  justify-content: space-between;
+}
+.upper_section .inner_upper_section .left_upper_section {
+  display: flex;
+  width: 15vw;
+  height: 21vh;
+  min-height: 21vh;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.upper_section .inner_upper_section .left_upper_section img {
+  width: 3.55vw;
+  height: 3.55vw;
+  min-height: auto;
+}
+.upper_section .inner_upper_section .left_upper_section span {
+  display: flex;
+  flex-direction: column;
+}
+.upper_section .inner_upper_section .left_upper_section span .sadovski {
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+.upper_section .inner_upper_section .right_upper_section {
+  display: flex;
+  width: 15vw;
+  height: 21vh;
+  min-height: 21vh;
+  justify-content: space-between;
+  align-items: center;
+}
+.upper_section .inner_upper_section .right_upper_section .heart_btn {
+  width: 2.6vw;
+  height: 2.6vw;
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.42vw;
+  border: none;
+}
+.upper_section .inner_upper_section .right_upper_section .heart_btn img {
+  width: 1.3vw;
+  height: 1.15vw;
+  min-height: auto;
+}
+.upper_section .inner_upper_section .right_upper_section .download_btn {
+  width: 10.73vw;
+  height: 2.55vw;
+  min-height: auto;
+  display: flex;
+  background-color: #219653;
+  border-radius: 0.42vw;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+.upper_section .inner_upper_section .right_upper_section .download_btn img {
+  margin-right: 1.32vw;
+  width: 1.5vw;
+  height: 1.5vw;
+  min-height: auto;
+}
+
+.center_upper_section {
+  width: 80vw;
+  height: 77vh;
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+.center_upper_section img {
+  width: 80vw;
+  height: 103vh;
+  min-height: auto;
 }
 
 /*# sourceMappingURL=photo_page.css.map */
