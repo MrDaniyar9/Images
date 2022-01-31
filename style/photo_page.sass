@@ -1,5 +1,5 @@
 @import "mixins/mixins"
-
+$gray: rgba(130, 130, 130, 1)
 *
     text-decoration: none
     color: white
@@ -38,18 +38,16 @@
 // selected image section
 
 .selected_image
-    @include flex(100vw, 55.73vw, 55.73vw)
+    @include flex(100vw, 125vh, 125vh)
     background-image: url("../images/background_main.png")
     background-size: cover
     background-position: center
     background-repeat: no-repeat
     flex-direction: column
     align-items: center
-    // width: 100vw
-    // height: 55.73vw
 
 .upper_section
-    @include flex(100vw, 21vh, 21vh)
+    @include flex(100vw, 12vh, 12vh)
     justify-content: center
     .inner_upper_section
         @include flex(80vw, 21vh, 21vh)
@@ -92,14 +90,90 @@
                     margin-right: 1.32vw
                     @include size(1.5vw,1.5vw)
 .center_upper_section
-    @include size(80vw, 77vh)
-    // background-image: url("../images/center_background.png")
-    // background-size: 100%
-    // background-position: center
-    // background-repeat: no-repeat
+    @include size(80vw, 91.5vh)
+    display: flex
+    justify-content: center
+    align-items: centers
+    position: relative
+    img
+        @include size(80vw, 100vh)
+    .extend_icon
+        @include size(1.30vw, auto)
+        position: absolute
+        top: 79vh
+        left: 70vw
+.bottom_section
+    font-size: 1.5rem
+    .similar_text
+        display: flex
+        justify-content: center
+    button
+        color: $gray
+        border: none
+        border-radius: 0.42vw
+    .similar_btn1
+        @include size(2.45vw, 4.15vh)
+    .similar_btn2
+        @include size(4.27vw, 4.15vh)
+    .similar_btn3
+        @include size(3.44vw, 4.15vh)
+    .similar_btn4
+        @include size(3.91vw, 4.15vh)
+    .similar_btn5
+        @include size(6.51vw, 4.15vh)
+
+// main section 
+.main_section
     display: flex
     justify-content: center
     align-items: center
-    outline: none
-    img
-        @include size(80vw, 103vh)
+    @include flex(100vw, auto, auto)
+    .inner_main_section
+        @include flex(80vw, auto, auto)
+        flex-direction: column
+        .upper_main
+            @include flex(75vw, 13.5vh, 13.5vh)
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+            :nth-child(1)
+                color: black
+                display: flex
+                font-weight: 700
+            :nth-child(2)
+                color: $gray
+                font-size: 0.875rem
+        .down_main
+            @include flex(75vw, auto, auto)
+            flex-direction: row
+            justify-content: space-between
+        .left_img_container
+            @include flex(24.79vw, 350vh, auto)
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            img
+                width: 24.79vw
+        .center_img_container
+            @include flex(24.79vw, 350vh, auto)
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            img
+                width: 24.79vw
+        .right_img_container
+            @include flex(24.79vw, 350vh, auto)
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            img
+                width: 24.79vw
+        .up_btn
+            @include size(2.5vw, 5vh)
+            display: flex
+            align-self: flex-end
+            align-items: center
+            justify-content: center
+            margin-bottom: 2.4vh
+            img
+                @include size(0.83vw, 2.4vh)
