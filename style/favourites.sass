@@ -1,0 +1,94 @@
+@import "mixins/mixins"
+$gray: rgba(130, 130, 130, 1)
+*
+    text-decoration: none
+    color: white
+
+// main header
+
+.main_header
+    @include flex(100vw, 4.22vw, 4.22vw)
+    background-color: #000
+    justify-content: center
+
+    .inner_container
+        @include size(75vw, 4.22vw, 4.22vw)
+        display: flex
+        flex-direction: row
+        .left_header
+            @include flex(10vw, 4.22vw, 4.22vw)
+            align-items: center
+            justify-content: space-between
+
+            img
+                width: 1.46vw
+            a
+                color: white
+                font-size: 1.5rem
+        .right_header
+            @include flex(65vw, 4.22vw, 4.22vw)
+            flex-direction: row
+            align-items: center
+            justify-content: flex-end
+            gap: 2.08vw
+            .search, .favourite, .history
+                display: flex
+                align-items: center
+                gap: 0.7vw
+                font-size: 1rem
+// main section
+.main_section
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    .inner_main_section
+        @include flex(80vw, auto, auto)
+        flex-direction: column
+        justify-content: center
+        align-items: center
+    .upper_section
+        @include flex(50vw, 40vh, auto)
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        h1
+            @include text(4.5rem, rgba(0, 0, 0, 1))
+        img
+            width: 1.20vw
+    .down_main
+        @include flex(75vw, auto, auto)
+        flex-direction: row
+        justify-content: space-between
+        .left_img_container
+            @include flex(24.79vw, 200vh, auto)
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            img
+                width: 24.79vw
+        .center_img_container
+            @include flex(24.79vw, 200vh, auto)
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            img
+                width: 24.79vw
+        .right_img_container
+            @include flex(24.79vw, 170vh, auto)
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            img
+                width: 24.79vw
+        .up_btn
+            @include size(2.5vw, 5vh)
+            display: flex
+            align-self: flex-end
+            align-items: center
+            justify-content: center
+            margin-bottom: 2.4vh
+            border: none
+            outline: none
+            img
+                @include size(0.83vw, 2.4vh)
